@@ -1,0 +1,13 @@
+<script>
+function kirimWhatsApp() {
+  let nama = document.getElementById("nama").value;
+  let email = document.getElementById("email").value;
+  let keluhan = document.getElementById("keluhan").value;
+
+  let pesan = `Halo! Saya ingin konsultasi kesehatan.\n\nNama: ${nama}\nEmail: ${email}\nKeluhan: ${keluhan}`;
+  let noWa = '081389979024'; // Ganti dengan nomor WhatsApp kamu (pakai 62 untuk Indonesia)
+
+  let url = `https://wa.me/${noWa}?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+}
+</script>
